@@ -1,0 +1,15 @@
+<ul>
+  <li>car: {{ carInfo.name }}</li>
+  <li>mileage: {{ carInfo.mileage }} km</li>
+  <li>fuel tank: {{ carInfo.fuelTank }} L</li>
+  <li>fuel: {{ carInfo.fuel }} L</li>
+  <li>characteristics:</li>
+  <ul>
+    <li *ngFor="let car of carInfo.characteristics">
+      {{car}}
+    </li>
+  </ul>
+</ul>
+
+<button class="btn-drive" [disabled]="!isVisible" (click)="drive()">drive</button> &nbsp;
+<button *ngIf="!isVisible" class="btn-refuel" (click)="refuel()">refuel</button>
