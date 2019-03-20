@@ -15,24 +15,20 @@ export class CarComponent {
       'Engine: 2 liters',
       'maxSpeed: 200 km/h'
     ]
-  }
-
-  constructor() {
-    
-  }
+  };
 
   public isVisible = true;
 
   public drive(): void {
     this.carInfo.mileage++;
     this.carInfo.fuel--;
-    if (this.carInfo.fuel == 0) {
+    if (this.carInfo.fuel === 0) {
       this.isVisible = false;
     }
   }
   public refuel(): void {
     this.carInfo.fuel = this.carInfo.fuelTank;
-    if (this.carInfo.fuel == this.carInfo.fuelTank) {
+    if (this.carInfo.fuel === this.carInfo.fuelTank) {
       this.isVisible = true;
     }
   }
